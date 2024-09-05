@@ -225,9 +225,9 @@ export type NodeViewProps = Simplify<
 >;
 
 export interface NodeViewRendererOptions {
-  stopEvent: ((props: { event: Event }) => boolean) | null;
+  stopEvent: ((props: { event: Event }) => boolean | null) | null;
   ignoreMutation:
-    | ((props: { mutation: MutationRecord | { type: 'selection'; target: Element } }) => boolean)
+    | ((props: { mutation: MutationRecord | { type: 'selection'; target: Element } }) => boolean | null)
     | null;
   contentDOMElementTag: string;
 }
